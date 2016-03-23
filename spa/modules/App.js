@@ -1,7 +1,7 @@
 import React from 'react';
 import NavLink from './NavLink';
 
-require('../sass/App.sass');
+//require('../sass/App.sass');
 
 export default class App extends React.Component {
   render() {

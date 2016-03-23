@@ -8,11 +8,16 @@ export default class Project extends React.Component {
   }
 
   render() {
-    const project = _.find(this.state.projects, (p) => {return p.name === this.props.params.project});
+    const project = _.find(this.state.projects, (p) => {
+      return p.name === this.props.params.project});
 
     return <div id="project">
       <header>
         <h1>{project.name}</h1>
+        <nav>
+          <a href="">Source Code</a>
+          <a href="">Activity</a>
+        </nav>
       </header>
       <main>
         <div className="description">
