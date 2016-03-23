@@ -21,23 +21,69 @@ html, body
     justify-content: space-between
     h1
       font-size: 1.6em
-      margin: 0.39em
+      margin: 1em 0.6em
       text-transform: lowercase
     nav
       a
         display: inline-block
         padding: 1em
-    nav#user
-      background: #000
-  main
+      &#primary
+        a:hover
+          background: #FFF
+          color: #069  
+      &#user
+        background: #000
+  > main
     background: #FFF
     color: #111
     flex: 1
-    margin: 1em
-    padding: 1em
-    h1, h2
-      font-size: 2em
+    h1
+      border-bottom: 1px solid #CCC
+      color: #333
+      font-size: 1.6em
+      margin: 0
+      padding: 0.25em 0
     a
-      color: #111
-  footer
+      color: #069
+  > footer
     padding: 1em
+    text-align: right
+    p
+      font-size: 0.8em
+      margin: 0 0 0.4em 0
+
+#home
+  position: relative
+  h1
+    position: absolute
+    margin: 1em !important
+
+#projects
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  > header
+    background: #EEE
+    width: 16em
+    align-items: stretch
+  header
+    h1
+      background: rgba(#069, 0.5)
+      color: #FFF
+      font-size: 1em
+      font-weight: bold
+      margin: 0
+      padding: 1em
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        padding: 0.5em 1em
+  #project
+    flex: 1
+    main
+      margin: 1em
+      .description
+        p
+          font-size: 1.4em

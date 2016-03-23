@@ -1,0 +1,6 @@
+[
+    { "name": "nr",  "description": "A simple newsreader." },
+    { "name": "veo", "description": "NaCL Vision." },
+    { "name": "rtc", "description": "HTML5 p2p Video Conferencing using ORTC/WebRTC." },
+    { "name": "pm",  "description": "Issue ticketing." }
+]
