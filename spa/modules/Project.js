@@ -1,19 +1,20 @@
 import React from 'react';
-import _ from 'lodash';
+import fetch from './ajax';
 
 export default class Project extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {projects: require("json!../data/projects")};
+
+    fetch("/projects.json").then((x) => {
+      this.state = { projects: x };
+      console.log(x);
+    });
   }
 
   render() {
-    const project = _.find(this.state.projects, (p) => {
-      return p.name === this.props.params.project});
-
     return <div id="project">
       <header>
-        <h1>{project.name}</h1>
+        <h1>{this.props.name}</h1>
         <nav>
           <a href="">Source Code</a>
           <a href="">Activity</a>
@@ -21,8 +22,9 @@ export default class Project extends React.Component {
       </header>
       <main>
         <div className="description">
-          <p>{project.description}</p>
+          <p>{this.props.description}</p>
         </div>
+        {this.props.details}
       </main>
     </div>;
   }
