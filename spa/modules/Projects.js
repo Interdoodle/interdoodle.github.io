@@ -8,6 +8,8 @@ export default class Projects extends React.Component {
   }
 
   render() {
+    const content = this.props.children || <p>Root.</p>;
+
     return <div id="projects">
       <header>
         <h1>Projects</h1>
@@ -17,7 +19,7 @@ export default class Projects extends React.Component {
           })}
         </ul>
       </header>
-      {this.props.children}
+      {content}
     </div>;
   }
 }
