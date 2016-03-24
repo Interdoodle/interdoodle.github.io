@@ -15,9 +15,5 @@ describe("App", () => {
     it("contains a title", () => {
       expect(appNode.textContent).toContain("Interdoodle");
     });
-
-    it("contains a Projects link", () => {
-      expect(appNode.querySelector("a[href=/projects]").textContent).toEqual("Projects");
-    });
   });
 });

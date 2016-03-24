@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+import NavLink from './NavLink';
 
 export default class Projects extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ export default class Projects extends React.Component {
         <h1>Projects</h1>
         <ul>
           { this.state.projects.map(x => {
-            return <li key={x.name}><Link to={'/projects/'+x.name}>{x.name}</Link></li>;
+            return <li key={x.name}><NavLink to={'/projects/'+x.name}>{x.name}</NavLink></li>;
           })}
         </ul>
       </header>

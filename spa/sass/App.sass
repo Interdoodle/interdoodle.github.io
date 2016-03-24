@@ -1,6 +1,10 @@
 *
   font: 1em Helvetica, Arial, sans-serif
 
+a.active
+  background: #444
+  color: #FFF !important
+
 html, body
   margin: 0
   height: 100%
@@ -36,6 +40,7 @@ html, body
   > main
     background: #FFF
     color: #111
+    display: flex
     flex: 1
     h1
       color: #333
@@ -59,38 +64,39 @@ html, body
 
 #projects
   display: flex
-  align-items: stretch
-  justify-content: space-between
+  width: 100%
+  header
+    h1
+      color: #FFF
+      font-size: 2em
+      font-weight: bold
+      letter-spacing: -0.1em
+      padding: 1em 0.3em 0.3em 0.3em
   > header
     background: #EEE
-    width: 16em
+    width: 15em
     align-items: stretch
     h1
       background: rgba(#069, 0.5)
-      color: #FFF
-      font-size: 1em
-      font-weight: bold
-      margin: 0
-      padding: 1em
     ul
       list-style: none
       margin: 0
       padding: 0
       li
-        padding: 0.5em 1em
+        border-bottom: 1px solid #CCC
+        a
+          display: block
+          padding: 0.5em 1em
+          &:hover
+            background: #CCC
   #project
     flex: 1
     > header
       align-items: center
-      background: #FC0
+      background: #369
       display: flex
       h1
-        border: 0
         flex: 1
-        font-size: 1em
-        font-weight: bold
-        margin: 0
-        padding: 1em
       nav
         a
           background: #000
@@ -103,3 +109,12 @@ html, body
       .description
         p
           font-size: 1.4em
+#app main .page
+  > header
+    background: #396
+    padding: 4em 1em 1em 1em
+    h1
+      color: #FFF
+      font-size: 2.5em
+      font-weight: bold
+      letter-spacing: -0.1em
