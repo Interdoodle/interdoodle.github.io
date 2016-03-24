@@ -1,8 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink';
 
-//require('../sass/App.sass');
-
 export default class App extends React.Component {
   render() {
     let year = new Date().getFullYear();

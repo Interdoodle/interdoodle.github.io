@@ -17,7 +17,6 @@ describe("App", () => {
     });
 
     it("contains a Projects link", () => {
-      console.log(appNode);
       expect(appNode.querySelector("a[href=/projects]").textContent).toEqual("Projects");
     });
   });
